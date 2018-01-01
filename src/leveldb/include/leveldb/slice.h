@@ -19,10 +19,11 @@
 #include <stddef.h>
 #include <string.h>
 #include <string>
+#include "leveldb/export.h"
 
 namespace leveldb {
 
-class Slice {
+class LEVELDB_EXPORT Slice {
  public:
   // Create an empty slice.
   Slice() : data_(""), size_(0) { }
@@ -94,7 +95,7 @@ inline bool operator!=(const Slice& x, const Slice& y) {
 }
 
 inline int Slice::compare(const Slice& b) const {
-  const int min_len = (size_ < b.size_) ? size_ : b.size_;
+  const size_t min_len = (size_ < b.size_) ? size_ : b.size_;
   int r = memcmp(data_, b.data_, min_len);
   if (r == 0) {
     if (size_ < b.size_) r = -1;

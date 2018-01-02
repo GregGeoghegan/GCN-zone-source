@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = GCN-qt
 macx:TARGET = "GCN-Qt"
-VERSION = 0.8.7.0
+VERSION = 0.8.6.3
 INCLUDEPATH += src src/json src/qt
 QT += core gui network widgets
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE

@@ -1,4 +1,4 @@
-0.8.7.0 changes
+0.8.6.3 changes
 ===============
 
 - fix qt5 stuff to get compilation work un ubuntu 17.10
